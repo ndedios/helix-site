@@ -6,7 +6,7 @@ indices:
       - /articles/**
     exclude:
       - '**/Document.*'
-    target: /query-index.xslx
+    target: /query-index
     properties:
       title:
         select: main h1:first-of-type
