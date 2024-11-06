@@ -3,7 +3,7 @@ version: 1
 indices:
   articles: &default
     include:
-      - /articles/*/*/*/*
+      - /articles/*
     exclude:
       - '**/Document.*'
     target: /query-index
