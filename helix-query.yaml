@@ -1,7 +1,7 @@
 version: 1
 
 indices:
-  articles: &default
+  english: &default
     include:
       - /articles/**
     exclude:
