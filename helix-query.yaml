@@ -3,10 +3,10 @@ version: 1
 indices:
   articles: &default
     include:
-      - /articles/*
+      - /articles/**
     exclude:
       - '**/Document.*'
-    target: /query-index
+    target: /query-index.json
     properties:
       author:
         select: head > meta[name="author"]
