@@ -6,7 +6,7 @@ indices:
       - /articles/**
     exclude:
       - '**/Document.*'
-    target: /query-index.json
+    target: /query-index.xslx
     properties:
       author:
         select: head > meta[name="author"]
