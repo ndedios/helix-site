@@ -4,7 +4,7 @@ indices:
   english: &default
     include:
       - /articles/**
-    target: /query-index.xslx
+    target: /articles/query-index.xslx
     properties:
       title:
         select: main h1:first-of-type
