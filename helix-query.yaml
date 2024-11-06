@@ -1,12 +1,10 @@
-version: 1
+version: 2
 
 indices:
   english: &default
     include:
       - /articles/**
-    exclude:
-      - '**/Document.*'
-    target: /query-index
+    target: /query-index.xslx
     properties:
       title:
         select: main h1:first-of-type
