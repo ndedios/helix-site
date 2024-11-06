@@ -1,4 +1,4 @@
-version: 2
+version: 1
 
 indices:
   english: &default
@@ -10,11 +10,4 @@ indices:
         select: main h1:first-of-type
         value: |
           textContent(el)
-      description:
-        select: head > meta[name="description"]
-        value: |
-          attribute(el, 'content')
-      tags:
-        select: head > meta[property="article:tag"]
-        values: |
-          attribute(el, 'content')
+
