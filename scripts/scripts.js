@@ -35,9 +35,13 @@ function buildDynamicAlertList(main) {
 }
 
 function buildArticleHeader(main) {
-  const section = document.createElement('div');
-  section.append(buildBlock('article-header', { elems: [] }));
-  main.prepend(section);
+  const h1 = main.querySelector('h1');
+  // eslint-disable-next-line no-bitwise
+  if (h1) {
+    const section = document.createElement('div');
+    section.append(buildBlock('article-header', { elems: [h1] }));
+    main.prepend(section);
+  }
 }
 
 /**
@@ -58,7 +62,7 @@ async function loadFonts() {
  */
 function buildAutoBlocks(main) {
   try {
-    //buildArticleHeader(main);
+    buildArticleHeader(main);
     buildDynamicAlertList(main);
     //buildHeroBlock(main);
   } catch (error) {
