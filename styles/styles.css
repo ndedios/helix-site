@@ -248,6 +248,34 @@ main > .section:first-of-type {
   }
 }
 
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section .default-content-wrapper {
+  width: 748px;
+}
+
+.section p:first-of-type {
+  width: 100vw;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  padding-top: 59px;
+}
+
+.section p,
+.section h1,
+.section h2,
+.section h3,
+.section h4 {
+  padding: 109px 0;
+}
+
 /* section metadata */
 main .section.light,
 main .section.highlight {
@@ -255,3 +283,4 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
