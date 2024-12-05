@@ -35,11 +35,11 @@ function buildDynamicAlertList(main) {
 }
 
 function buildArticleHeader(main) {
-  const h1 = main.querySelector('h1');
+  const picture = main.querySelector('picture');
   // eslint-disable-next-line no-bitwise
-  if (h1) {
+  if (picture) {
     const section = document.createElement('div');
-    section.append(buildBlock('article-header', { elems: [h1] }));
+    section.append(buildBlock('article-header', { elems: [picture] }));
     main.prepend(section);
   }
 }
