@@ -33,7 +33,8 @@ function buildArticleInfo() {
   articleInfoTime.classList.add('article-info-time');
   articleInfoTime.textContent = `${parseTime(articletime)} read`;
   const articleInfoTimeIcon = document.createElement('span');
-  articleInfoTimeIcon.classList.add('icon icon-list');
+  articleInfoTimeIcon.classList.add('icon');
+  articleInfoTimeIcon.classList.add('icon-list');
   articleInfoTime.prepend(articleInfoTimeIcon);
 
   const articleInfoPrimaryTopic = document.createElement('div');
