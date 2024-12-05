@@ -58,7 +58,7 @@ async function loadFonts() {
  */
 function buildAutoBlocks(main) {
   try {
-    buildArticleHeader(main);
+    //buildArticleHeader(main);
     buildDynamicAlertList(main);
     //buildHeroBlock(main);
   } catch (error) {
