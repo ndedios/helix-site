@@ -32,3 +32,29 @@
   padding-top: 59px;
   margin-top: 130px;
 }
+
+h1 {
+  font-size: 2.625rem;
+  letter-spacing: .0125rem;
+  line-height: 3.375rem;
+  color: #112b4a;
+  font-family: Averta;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2rem;
+  letter-spacing: .01em;
+  line-height: 2.625rem;
+  font-weight: 600;
+  color: #112b4a;
+  font-family: Averta;
+}
+
+h4 {
+  font-size: 1.25rem;
+  letter-spacing: .01em;
+  line-height: 1.625rem;
+  color: #112b4a;
+  font-family: Averta;
+}
