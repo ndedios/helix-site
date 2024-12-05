@@ -85,18 +85,25 @@ function buildArticleData() {
   return articleData;
 }
 
+function buildBase(block) {
+  const picture = block.querySelector('picture');
+  picture.closest('div').classList.add('background-image');
+  const shadow = document.createElement('span');
+  shadow.classList.add('shadow');
+  picture.closest('p').append(shadow);
+}
+
 /**
  * loads and decorates the article header
  * @param {Element} block The block element
  */
 export default async function decorate(block) {
-  block.querySelector('picture').closest('div').classList.add('background-image');
-  const heading = block.querySelector('h1');
+  buildBase(block);
 
   const articleInfoWrapper = document.createElement('div');
   articleInfoWrapper.classList.add('default-content-wrapper');
   articleInfoWrapper.append(buildArticleInfo());
-  articleInfoWrapper.append(heading);
+  articleInfoWrapper.append(block.querySelector('h1'));
   articleInfoWrapper.append(buildArticleData());
   block.append(articleInfoWrapper);
 }
