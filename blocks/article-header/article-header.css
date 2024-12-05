@@ -15,6 +15,9 @@
     margin-bottom: 29px;
     display: flex;
     flex-wrap: wrap;
+    color: #5a6874;
+    font-size: .875rem;
+    line-height: 1.25rem;
 }
 
 .article-header .article-info .article-info-time {
@@ -39,6 +42,16 @@
     text-transform: uppercase;
 }
 
+.article-header .article-info .article-info-bookmark {
+    flex: 0 0 auto;
+    width: 25%;
+    color: #006eb6;
+}
+
+.article-header .article-info .article-info-bookmark .icon {
+    margin-right: .5rem;
+}
+
 .article-header .article-data {
     margin-bottom: 62px;
     display: flex;
@@ -53,6 +66,10 @@
 .article-header .article-data .article-data-author {
     flex: 0 0 auto;
     width: 50%;
+}
+
+.article-header .article-data .article-data-author a {
+    color: #006eb6;
 }
 
 .article-header .article-data .article-data-date {

@@ -41,10 +41,20 @@ function buildArticleInfo() {
   articleInfoPrimaryTopic.classList.add('article-info-primary-topic');
   articleInfoPrimaryTopic.textContent = primarytopic;
 
+
+  const articleInfoBookmark = document.createElement('div');
+  articleInfoBookmark.classList.add('article-info-bookmark');
+  articleInfoBookmark.textContent = 'Save';
+  const articleInfoBookmarkIcon = document.createElement('span');
+  articleInfoBookmarkIcon.classList.add('icon');
+  articleInfoBookmarkIcon.classList.add('icon-bookmark-outlined');
+  articleInfoBookmark.prepend(articleInfoBookmarkIcon);
+
   const articleInfo = document.createElement('div');
   articleInfo.classList.add('article-info');
   articleInfo.append(articleInfoTime);
   articleInfo.append(articleInfoPrimaryTopic);
+  articleInfo.append(articleInfoBookmark);
 
   return articleInfo;
 }
