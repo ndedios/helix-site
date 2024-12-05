@@ -20,18 +20,34 @@
 .article-header .article-info .article-info-time {
     flex: 0 0 auto;
     width: 25%;
+    letter-spacing: .090625rem;
+    text-transform: uppercase;
+}
+
+
+.article-header .article-info .article-info-time .icon {
+    color: #3cc8ff;
+    padding-right: .5rem;
 }
 
 .article-header .article-info .article-info-primary-topic {
     flex: 0 0 auto;
     width: 50%;
     text-align: center;
+    color: #006eb6;
+    letter-spacing: .090625rem;
+    text-transform: uppercase;
 }
 
 .article-header .article-data {
     margin-bottom: 62px;
     display: flex;
     flex-wrap: wrap;
+    color: #5a6874;
+    font-family: Averta;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
 }
 
 .article-header .article-data .article-data-author {

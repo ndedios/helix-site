@@ -32,6 +32,9 @@ function buildArticleInfo() {
   const articleInfoTime = document.createElement('div');
   articleInfoTime.classList.add('article-info-time');
   articleInfoTime.textContent = `${parseTime(articletime)} read`;
+  const articleInfoTimeIcon = document.createElement('span');
+  articleInfoTimeIcon.classList.add('icon icon-list');
+  articleInfoTime.prepend(articleInfoTimeIcon);
 
   const articleInfoPrimaryTopic = document.createElement('div');
   articleInfoPrimaryTopic.classList.add('article-info-primary-topic');
@@ -47,15 +50,21 @@ function buildArticleInfo() {
 
 function buildArticleData() {
   const author = getMetadata('author');
+  const authorurl = getMetadata('authorurl');
   const effectivedate = getMetadata('effectivedate');
+
+  const articleDataAuthorLink = document.createElement('a');
+  articleDataAuthorLink.textContent = author;
+  articleDataAuthorLink.setAttribute('href', authorurl);
 
   const articleDataAuthor = document.createElement('div');
   articleDataAuthor.classList.add('article-data-author');
-  articleDataAuthor.textContent = author;
+  articleDataAuthor.textContent = 'By ';
+  articleDataAuthor.append(articleDataAuthorLink);
 
   const articleDataDate = document.createElement('div');
   articleDataDate.classList.add('article-data-date');
-  articleDataDate.textContent = effectivedate;
+  articleDataDate.textContent = new Date(effectivedate).format('dd mmm yyyy');
 
   const articleData = document.createElement('div');
   articleData.classList.add('article-data');
