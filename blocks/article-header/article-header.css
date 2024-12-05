@@ -9,3 +9,38 @@
 .article-header .background-image {
     height: 120px;
 }
+
+.article-header .article-info {
+    padding-top: 59px;
+    margin-bottom: 29px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.article-header .article-info .article-info-time {
+    flex: 0 0 auto;
+    width: 25%;
+}
+
+.article-header .article-info .article-info-primary-topic {
+    flex: 0 0 auto;
+    width: 50%;
+    text-align: center;
+}
+
+.article-header .article-data {
+    margin-bottom: 62px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.article-header .article-data .article-data-author {
+    flex: 0 0 auto;
+    width: 50%;
+}
+
+.article-header .article-data .article-data-date {
+    flex: 0 0 auto;
+    width: 50%;
+    text-align: right;
+}
