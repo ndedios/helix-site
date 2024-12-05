@@ -64,3 +64,8 @@ h4 {
   color: #112b4a;
   font-family: Averta;
 }
+
+.section img {
+  width: -webkit-fill-available;
+  height: auto;
+}
