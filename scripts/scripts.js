@@ -142,7 +142,7 @@ async function loadEager(doc) {
     // do nothing
   }
 
-  //loadHeader(doc.querySelector('header'));
+  loadHeader(doc.querySelector('header'));
   loadFooter(doc.querySelector('footer'));
 
   //import('./cme/jquery.1fc733054ddb2e2fcd4a0f763671047b.js');
