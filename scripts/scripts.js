@@ -235,9 +235,9 @@ async function loadLazy(doc) {
   loadCSS(`${window.hlx.codeBasePath}/styles/cme/feedback-form.b7e4d41a66520ec5f7bab3a91ed5565e.css`);
   loadCSS(`${window.hlx.codeBasePath}/styles/cme/language-selector.c806a9a3563fd736819726caa33a4f7b.css`);
   loadCSS(`${window.hlx.codeBasePath}/styles/cme/dynamic-alert-list.faa5b20b3e608b66780a4e431b9b541f.css`);
-  loadCSS(`${window.hlx.codeBasePath}/styles/cme/article-header.e8b495ec5e75ceee30679246c3e7fecf.css`);
-  loadCSS(`${window.hlx.codeBasePath}/styles/cme/image.f349ab716c0ff2a3bd8550fe2f51b951.css`);
-  loadCSS(`${window.hlx.codeBasePath}/styles/cme/text.e7e8d925d82c0530d9b902c4c5d67dca.css`);
+  //loadCSS(`${window.hlx.codeBasePath}/styles/cme/article-header.e8b495ec5e75ceee30679246c3e7fecf.css`);
+  //loadCSS(`${window.hlx.codeBasePath}/styles/cme/image.f349ab716c0ff2a3bd8550fe2f51b951.css`);
+  //loadCSS(`${window.hlx.codeBasePath}/styles/cme/text.e7e8d925d82c0530d9b902c4c5d67dca.css`);
   loadFonts();
 
   import('./cme/custom-navbar.870ed14da87b882b0c1f783292f3f12b.js');
@@ -248,9 +248,9 @@ async function loadLazy(doc) {
   import('./cme/vendor.c50054cf072d88684ad63be26c943c16.js');
   import('./cme/common.52ce1b7dcd776b2ecc275fca40301c87.js');
   import('./cme/dynamic-alert-list.f6d92d1593c4b6af619c74760ffd28d7.js');
-  import('./cme/article-header.deb20f139b593f1b047d4d289ce4e08d.js');
-  import('./cme/image.53044f44c89fe2885739265f6f156483.js');
-  import('./cme/text.8288c3f4be088236de4d520e206a8353.js');
+  //import('./cme/article-header.deb20f139b593f1b047d4d289ce4e08d.js');
+  //import('./cme/image.53044f44c89fe2885739265f6f156483.js');
+  //import('./cme/text.8288c3f4be088236de4d520e206a8353.js');
   //import('./cme/dependencies.e420e99671686097433a87b2a109856a.js');
   cmeLazyScripts();
 }
