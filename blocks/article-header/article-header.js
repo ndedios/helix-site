@@ -8,7 +8,7 @@ import { loadFragment } from '../fragment/fragment.js';
 export default async function decorate(block) {
   const author = getMetadata('author');
   const primarytopic = getMetadata('primarytopic');
-  block.querySelector('picture').parentElement.classList.add('background-image');
+  block.querySelector('picture').closest('div').classList.add('background-image');
   const heading = block.querySelector('h1');
 
   const articleInfo = document.createElement('div');
