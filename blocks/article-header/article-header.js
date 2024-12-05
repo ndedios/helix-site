@@ -88,9 +88,12 @@ function buildArticleData() {
 function buildBase(block) {
   const picture = block.querySelector('picture');
   picture.closest('div').classList.add('background-image');
+  const shadowWrapper = document.createElement('span');
+  shadowWrapper.classList.add('shadow-wrapper');
   const shadow = document.createElement('span');
   shadow.classList.add('shadow');
-  picture.closest('p').append(shadow);
+  shadowWrapper.append(shadow);
+  picture.closest('p').append(shadowWrapper);
 }
 
 /**
