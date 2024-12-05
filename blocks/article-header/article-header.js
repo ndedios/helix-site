@@ -65,7 +65,7 @@ function buildArticleData() {
 
   const articleDataDate = document.createElement('div');
   articleDataDate.classList.add('article-data-date');
-  articleDataDate.textContent = new Date(effectivedate).format('dd mmm yyyy');
+  articleDataDate.textContent = new Date(effectivedate).toLocaleDateString();
 
   const articleData = document.createElement('div');
   articleData.classList.add('article-data');
