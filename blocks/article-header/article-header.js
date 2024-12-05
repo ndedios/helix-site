@@ -20,9 +20,9 @@ export function parseTime(time) {
     hours = Math.floor(timeInMins / 60);
     mins = timeInMins % 60;
     const timeInHours = mins > 30 ? hours + 1 : hours;
-    return timeInHours + ` ${i18n('hour')}`;
+    return timeInHours + ' hour';
   }
-  return timeInMins + ` ${i18n('min')}`;
+  return timeInMins + ' min';
 }
 
 function buildArticleInfo() {
