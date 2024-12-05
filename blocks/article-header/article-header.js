@@ -7,14 +7,22 @@ import { loadFragment } from '../fragment/fragment.js';
  */
 export default async function decorate(block) {
   const author = getMetadata('author');
+  const primarytopic = getMetadata('primarytopic');
   block.querySelector('picture').parentElement.classList.add('background-image');
+  const heading = block.querySelector('h1');
 
   const articleInfo = document.createElement('div');
   articleInfo.classList.add('article-info');
-  articleInfo.textContent = author;
+  articleInfo.textContent = primarytopic;
+
+  const articleData = document.createElement('div');
+  articleData.classList.add('article-data');
+  articleData.textContent = author;
 
   const articleInfoWrapper = document.createElement('div');
   articleInfoWrapper.classList.add('default-content-wrapper');
   articleInfoWrapper.append(articleInfo);
+  articleInfoWrapper.append(heading);
+  articleInfoWrapper.append(articleData);
   block.append(articleInfoWrapper);
 }
