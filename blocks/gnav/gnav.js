@@ -123,7 +123,7 @@ class Gnav {
         if (isSecondary) navItem.classList.add('secondary');
       }
       const menu = navLink.closest('div');
-      menu.querySelector('h2').remove();
+      navLink.remove();
       navItem.appendChild(navLink);
       if (navLink.href.match('#subscribe')) {
         navLink.classList.add('newsletter-modal-cta');
