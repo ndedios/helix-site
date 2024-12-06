@@ -62,7 +62,7 @@ body {
   margin-top: 100px;
 }
 
-.section {
+main > .section {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -70,13 +70,13 @@ body {
   justify-content: center;
 }
 
-.section .default-content-wrapper {
+main > .section .default-content-wrapper {
   width: 748px;
   background-color: #fff;
   padding: 0 109px;
 }
 
-.section p:first-of-type {
+main > .section p:first-of-type {
   width: 100vw;
   left: 0;
   position: absolute;
@@ -84,15 +84,15 @@ body {
   padding: 0;
 }
 
-.section p,
-.section h1,
-.section h2,
-.section h3,
-.section h4 {
+main > .section p,
+main > .section h1,
+main > .section h2,
+main > .section h3,
+main > .section h4 {
   margin-bottom: 30px;
 }
 
-h1 {
+main > h1 {
   font-size: 2.625rem;
   letter-spacing: .0125rem;
   line-height: 3.375rem;
@@ -101,13 +101,13 @@ h1 {
   font-weight: 600;
 }
 
-h1 strong,
-h2 strong,
-h4 strong {
+main > h1 strong,
+main > h2 strong,
+main > h4 strong {
   font-weight: 600;
 }
 
-h2 {
+main > h2 {
   font-size: 2rem;
   letter-spacing: .01em;
   line-height: 2.625rem;
@@ -116,7 +116,7 @@ h2 {
   font-family: Averta;
 }
 
-h4 {
+main > h4 {
   font-size: 1.25rem;
   letter-spacing: .01em;
   line-height: 1.625rem;
@@ -124,7 +124,7 @@ h4 {
   font-family: Averta;
 }
 
-.section img {
+main > .section img {
   width: -webkit-fill-available;
   height: auto;
 }
