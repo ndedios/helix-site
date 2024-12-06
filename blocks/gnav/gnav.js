@@ -1,7 +1,6 @@
 import {
   loadScript,
   getHelixEnv,
-  debug,
   makeLinksRelative,
   getLocale,
 } from '../../scripts/scripts.js';
@@ -373,7 +372,7 @@ export default async function init(blockEl) {
         const gnav = new Gnav(gnavDoc.body, blockEl);
         gnav.init();
       } catch {
-        debug('Could not create global navigation.');
+        console.log('Could not create global navigation.');
       }
     }
   }
