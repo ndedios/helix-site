@@ -84,13 +84,13 @@ class Gnav {
     if (!brandBlock) return null;
     const brand = brandBlock.querySelector('a');
 
-    /*const { className } = brandBlock;
+    const { className } = brandBlock;
     const classNameClipped = className.slice(0, -1);
     const classNames = classNameClipped.split('--');
     brand.className = classNames.join(' ');
     if (brand.classList.contains('with-logo')) {
       brand.insertAdjacentHTML('afterbegin', BRAND_IMG);
-    }*/
+    }
     return brand;
   }
 
