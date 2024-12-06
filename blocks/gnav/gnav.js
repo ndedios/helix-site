@@ -116,14 +116,15 @@ class Gnav {
     const mainNav = createTag('div', { class: 'gnav-mainnav' });
     navLinks.forEach((navLink, idx) => {
       const navItem = createTag('div', { class: 'gnav-navitem' });
-      const isPrimary = navLink.closest('.menu').classList.contains('primary');
-      const isSecondary = navLink.closest('.menu').classList.contains('secondary');
       const menu = navLink.closest('div');
       menu.querySelector('h2').remove();
       navItem.appendChild(navLink);
-      if (isPrimary) navItem.classList.add('primary');
-      if (isSecondary) navItem.classList.add('secondary');
-
+      if (navLink.closest('.menu')) {
+        const isPrimary = navLink.closest('.menu').classList.contains('primary');
+        const isSecondary = navLink.closest('.menu').classList.contains('secondary');
+        if (isPrimary) navItem.classList.add('primary');
+        if (isSecondary) navItem.classList.add('secondary');
+      }
       if (navLink.href.match('#subscribe')) {
         navLink.classList.add('newsletter-modal-cta');
         navLink.href = '/';
