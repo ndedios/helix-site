@@ -147,10 +147,17 @@ async function loadEager(doc) {
   //loadHeader(doc.querySelector('header'));
   /* load gnav */
   const header = document.querySelector('header');
-  const gnavPath = getMetadata('gnav') || `/gnav`;
+  /*const gnavPath = getMetadata('gnav') || `/gnav`;
   header.setAttribute('data-block-name', 'gnav');
   header.setAttribute('data-gnav-source', gnavPath);
   loadBlock(header);
+*/
+  const headerBlock = buildBlock('gnav', '');
+  header.append(headerBlock);
+  decorateBlock(headerBlock);
+  loadBlock(headerBlock);
+
+
 
   loadFooter(doc.querySelector('footer'));
 
