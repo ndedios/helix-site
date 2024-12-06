@@ -131,6 +131,11 @@ button.gnav-toggle:after {
   font-weight: 400;
 }
 
+.gnav-navitem.divider {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .gnav-navitem.has-Menu.is-Open:before {
   background: #969796;
   position: absolute;

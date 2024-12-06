@@ -111,6 +111,7 @@ class Gnav {
       this.buildMainNav(mainNav, primaryLinks, 'primary');
     }
     const navItem = createTag('div', { class: 'gnav-navitem' });
+    navItem.classList.add('divider');
     navItem.textContent = '|';
     mainNav.appendChild(navItem);
     const secondaryLinks = this.body.querySelectorAll('.secondary h2 > a');
