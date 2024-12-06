@@ -1,6 +1,5 @@
 import {
   loadScript,
-  getLocale,
 } from '../../scripts/scripts.js';
 import { createTag } from '../block-helpers.js';
 
@@ -236,7 +235,7 @@ class Gnav {
     window.adobeid = {
       client_id: 'theblog-helix',
       scope: 'AdobeID,openid,gnav',
-      locale: getLocale(),
+      locale: 'en',
       autoValidateToken: true,
       environment: this.env.ims,
       useLocalStorage: false,
