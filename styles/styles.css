@@ -128,3 +128,13 @@ main > .section img {
   width: -webkit-fill-available;
   height: auto;
 }
+
+header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  background-color: var(--color-white);
+  z-index: 3;
+}
