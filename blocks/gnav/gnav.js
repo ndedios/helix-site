@@ -1,7 +1,5 @@
 import {
   loadScript,
-  getHelixEnv,
-  makeLinksRelative,
   getLocale,
 } from '../../scripts/scripts.js';
 import { createTag } from '../block-helpers.js';
@@ -16,7 +14,7 @@ class Gnav {
   constructor(body, el) {
     this.el = el;
     this.body = body;
-    this.env = getHelixEnv();
+    this.env = {};
     this.desktop = window.matchMedia('(min-width: 1200px)');
   }
 
@@ -53,7 +51,7 @@ class Gnav {
       nav.append(logo);
     }
 
-    makeLinksRelative(nav);
+    //makeLinksRelative(nav);
 
     const wrapper = createTag('div', { class: 'gnav-wrapper' }, nav);
     this.el.append(this.curtain, wrapper);
