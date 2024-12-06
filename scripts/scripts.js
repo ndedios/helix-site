@@ -11,6 +11,7 @@ import {
   loadSection,
   loadSections,
   loadCSS,
+  getMetadata,
 } from './aem.js';
 
 /**
@@ -145,7 +146,7 @@ async function loadEager(doc) {
   //loadHeader(doc.querySelector('header'));
   /* load gnav */
   const header = document.querySelector('header');
-  const gnavPath = getMetadata('gnav') || `${getRootPath()}/gnav`;
+  const gnavPath = getMetadata('gnav') || `/gnav`;
   header.setAttribute('data-block-name', 'gnav');
   header.setAttribute('data-gnav-source', gnavPath);
   loadBlock(header);
