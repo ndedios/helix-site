@@ -544,6 +544,10 @@ button.gnav-toggle:after {
     padding: 0 88px;
   }
 
+  .gnav .gnav-brand {
+    margin-right: 60px;
+  }
+
   .gnav.is-Open {
     position: unset;
   }
