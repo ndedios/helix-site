@@ -105,26 +105,25 @@ class Gnav {
   }
 
   decorateMainNav = () => {
-    const mainLinks = this.body.querySelectorAll('h2 > a');
-    if (mainLinks.length > 0) {
-      return this.buildMainNav(mainLinks);
+    const mainNav = createTag('div', { class: 'gnav-mainnav' });
+    const primaryLinks = this.body.querySelectorAll('.primary h2 > a');
+    if (primaryLinks.length > 0) {
+      this.buildMainNav(mainNav, primaryLinks, 'primary');
     }
-    return null;
+    const secondaryLinks = this.body.querySelectorAll('.secondary h2 > a');
+    if (secondaryLinks.length > 0) {
+      this.buildMainNav(mainNav, secondaryLinks, 'secondary');
+    }
+    return mainNav;
   }
 
-  buildMainNav = (navLinks) => {
-    const mainNav = createTag('div', { class: 'gnav-mainnav' });
+  buildMainNav = (mainNav, navLinks, menuType) => {
     navLinks.forEach((navLink, idx) => {
       const navItem = createTag('div', { class: 'gnav-navitem' });
-      if (navLink.closest('.menu')) {
-        const isPrimary = navLink.closest('.menu').classList.contains('primary');
-        const isSecondary = navLink.closest('.menu').classList.contains('secondary');
-        if (isPrimary) navItem.classList.add('primary');
-        if (isSecondary) navItem.classList.add('secondary');
-      }
       const menu = navLink.closest('div');
-      navLink.remove();
+      menu.querySelector('h2').remove();
       navItem.appendChild(navLink);
+      navItem.classList.add(menuType);
       if (navLink.href.match('#subscribe')) {
         navLink.classList.add('newsletter-modal-cta');
         navLink.href = '/';
@@ -153,8 +152,6 @@ class Gnav {
       }
       mainNav.appendChild(navItem);
     });
-
-    return mainNav;
   }
 
   decorateMenu = (navItem, navLink, menu) => {

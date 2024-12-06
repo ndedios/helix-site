@@ -146,7 +146,6 @@ button.gnav-toggle:after {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 12px;
   color: rgb(44, 44, 44);
   transition: background-color .1s ease;
 }
@@ -565,6 +564,17 @@ button.gnav-toggle:after {
     display: flex;
     align-items: stretch;
     position: relative;
+    margin-right: 30px;
+  }
+
+  .gnav-navitem:last-child {
+    margin-right: 0;
+  }
+
+  .gnav-navitem.secondary:before {
+    color: #5a6874;
+    content: "|";
+    display: inline-block;
   }
 
   .gnav-navitem.has-Menu.is-Open:before {
@@ -588,7 +598,6 @@ button.gnav-toggle:after {
   .gnav-navitem a {
     justify-content: unset;
     line-height: unset;
-    padding: 20px;
     border-bottom: unset;
   }
 
