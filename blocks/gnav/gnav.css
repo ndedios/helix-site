@@ -118,7 +118,16 @@ button.gnav-toggle:after {
 }
 
 .gnav-navitem {
-  font-size: 14px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.gnav-navitem.primary {
+  font-weight: 700;
+}
+
+.gnav-navitem.secondary {
+  font-weight: 400;
 }
 
 .gnav-navitem.has-Menu.is-Open:before {
@@ -166,24 +175,6 @@ button.gnav-toggle:after {
 
 .gnav-navitem > a {
   border-bottom: solid 1px #f3f3f3;
-}
-
-.gnav-navitem.has-Menu > a:after {
-  display: flex;
-  width: 5px;
-  height: 5px;
-  border-top-width: 0;
-  border-left-width: 0;
-  border-bottom-width: 1px;
-  border-right-width: 1px;
-  border-style: solid;
-  border-color: #2c2c2c;
-  transform-origin: 75% 75%;
-  transform: rotate(45deg);
-  transition: transform .1s ease;
-  content: '';
-  margin-left: 5px;
-  margin-right: 3px;
 }
 
 .gnav-navitem.has-Menu.is-Open > a:after {
