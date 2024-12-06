@@ -153,9 +153,9 @@ async function loadEager(doc) {
   loadBlock(headerBlock);*/
 
   const header = document.querySelector('header');
-  const gnavPath = getMetadata('gnav') || `${getRootPath()}/gnav`;
+  //const gnavPath = getMetadata('gnav') || `${getRootPath()}/gnav`;
   header.setAttribute('data-block-name', 'gnav');
-  header.setAttribute('data-gnav-source', gnavPath);
+  header.setAttribute('data-gnav-source', '/nav');
   loadBlock(header);
 
   loadFooter(doc.querySelector('footer'));
