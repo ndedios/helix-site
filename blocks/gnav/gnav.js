@@ -1,6 +1,6 @@
 import {
   loadScript,
-} from '../../scripts/scripts.js';
+} from '../../scripts/aem.js';
 import { createTag } from '../block-helpers.js';
 
 const BRAND_IMG = '<img loading="lazy" alt="Adobe" src="/blocks/gnav/adobe-logo.svg">';
