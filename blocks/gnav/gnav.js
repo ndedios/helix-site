@@ -110,6 +110,9 @@ class Gnav {
     if (primaryLinks.length > 0) {
       this.buildMainNav(mainNav, primaryLinks, 'primary');
     }
+    const navItem = createTag('div', { class: 'gnav-navitem' });
+    navItem.textContent = '|';
+    mainNav.appendChild(navItem);
     const secondaryLinks = this.body.querySelectorAll('.secondary h2 > a');
     if (secondaryLinks.length > 0) {
       this.buildMainNav(mainNav, secondaryLinks, 'secondary');

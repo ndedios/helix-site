@@ -120,6 +120,7 @@ button.gnav-toggle:after {
 .gnav-navitem {
   font-size: 16px;
   text-transform: uppercase;
+  font-family: 'Averta';
 }
 
 .gnav-navitem.primary {
@@ -569,12 +570,6 @@ button.gnav-toggle:after {
 
   .gnav-navitem:last-child {
     margin-right: 0;
-  }
-
-  .gnav-navitem.secondary:before {
-    color: #5a6874;
-    content: "|";
-    display: inline-block;
   }
 
   .gnav-navitem.has-Menu.is-Open:before {
