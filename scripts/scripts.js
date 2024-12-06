@@ -235,8 +235,8 @@ async function loadLazy(doc) {
   loadCSS(`${window.hlx.codeBasePath}/styles/cme/common.b054aae7717e8a58250e23b6db7a09ba.css`);
   loadCSS(`${window.hlx.codeBasePath}/styles/cme/dependencies.56fb58fb2b6eb0314bab56a47d047112.css`);
   loadCSS(`${window.hlx.codeBasePath}/styles/cme/vendor.1c80d0c6d71eaea8333ba7ea1cd47f6c.css`);
-  loadCSS(`${window.hlx.codeBasePath}/styles/cme/custom-navbar.aa86bb85262829c3765a59a06eacaf0b.css`);
-  loadCSS(`${window.hlx.codeBasePath}/styles/cme/collapsible.3919d3ac8087bdea78845d866a8dbc45.css`);
+  //loadCSS(`${window.hlx.codeBasePath}/styles/cme/custom-navbar.aa86bb85262829c3765a59a06eacaf0b.css`);
+  //loadCSS(`${window.hlx.codeBasePath}/styles/cme/collapsible.3919d3ac8087bdea78845d866a8dbc45.css`);
   loadCSS(`${window.hlx.codeBasePath}/styles/cme/feedback-form.b7e4d41a66520ec5f7bab3a91ed5565e.css`);
   loadCSS(`${window.hlx.codeBasePath}/styles/cme/language-selector.c806a9a3563fd736819726caa33a4f7b.css`);
   loadCSS(`${window.hlx.codeBasePath}/styles/cme/dynamic-alert-list.faa5b20b3e608b66780a4e431b9b541f.css`);
@@ -245,9 +245,9 @@ async function loadLazy(doc) {
   //loadCSS(`${window.hlx.codeBasePath}/styles/cme/text.e7e8d925d82c0530d9b902c4c5d67dca.css`);
   loadFonts();
 
-  import('./cme/custom-navbar.870ed14da87b882b0c1f783292f3f12b.js');
-  import('./cme/content-toggle.785ccebfcf3031805ea88b853c6eb377.js');
-  import('./cme/collapsible.253c0ec6a3ac417570a8044eb4b0a38b.js');
+  //import('./cme/custom-navbar.870ed14da87b882b0c1f783292f3f12b.js');
+  //import('./cme/content-toggle.785ccebfcf3031805ea88b853c6eb377.js');
+  //import('./cme/collapsible.253c0ec6a3ac417570a8044eb4b0a38b.js');
   import('./cme/feedback-form.9d433f3d15a7e2d07ac4f09d1d6cafa8.js');
   import('./cme/language-selector.b2ced5c1f9ac40f8e7a1fefe30bde5a8.js');
   import('./cme/vendor.c50054cf072d88684ad63be26c943c16.js');
