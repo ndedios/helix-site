@@ -142,7 +142,14 @@ async function loadEager(doc) {
     // do nothing
   }
 
-  loadHeader(doc.querySelector('header'));
+  //loadHeader(doc.querySelector('header'));
+  /* load gnav */
+  const header = document.querySelector('header');
+  const gnavPath = getMetadata('gnav') || `${getRootPath()}/gnav`;
+  header.setAttribute('data-block-name', 'gnav');
+  header.setAttribute('data-gnav-source', gnavPath);
+  loadBlock(header);
+
   loadFooter(doc.querySelector('footer'));
 
   //import('./cme/jquery.1fc733054ddb2e2fcd4a0f763671047b.js');
