@@ -552,10 +552,6 @@ button.gnav-toggle:after {
     display: none;
   }
 
-  .gnav .gnav-brand {
-    padding: 0 20px;
-  }
-
   .gnav.is-Open .gnav-search-bar {
     display: none;
   }
