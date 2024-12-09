@@ -246,9 +246,9 @@ async function loadLazy(doc) {
   if (hash && element) element.scrollIntoView();
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
-  loadCSS(`${window.hlx.codeBasePath}/styles/cme/common.b054aae7717e8a58250e23b6db7a09ba.css`);
-  loadCSS(`${window.hlx.codeBasePath}/styles/cme/dependencies.56fb58fb2b6eb0314bab56a47d047112.css`);
-  loadCSS(`${window.hlx.codeBasePath}/styles/cme/vendor.1c80d0c6d71eaea8333ba7ea1cd47f6c.css`);
+  //loadCSS(`${window.hlx.codeBasePath}/styles/cme/common.b054aae7717e8a58250e23b6db7a09ba.css`);
+  //loadCSS(`${window.hlx.codeBasePath}/styles/cme/dependencies.56fb58fb2b6eb0314bab56a47d047112.css`);
+  //loadCSS(`${window.hlx.codeBasePath}/styles/cme/vendor.1c80d0c6d71eaea8333ba7ea1cd47f6c.css`);
   //loadCSS(`${window.hlx.codeBasePath}/styles/cme/custom-navbar.aa86bb85262829c3765a59a06eacaf0b.css`);
   //loadCSS(`${window.hlx.codeBasePath}/styles/cme/collapsible.3919d3ac8087bdea78845d866a8dbc45.css`);
   //loadCSS(`${window.hlx.codeBasePath}/styles/cme/feedback-form.b7e4d41a66520ec5f7bab3a91ed5565e.css`);
