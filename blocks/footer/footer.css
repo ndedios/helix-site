@@ -1,6 +1,5 @@
 .footer-links-wrapper {
     background-image: linear-gradient(180deg, #f1f5f7 0, #fff 30%, #fff);
-    padding-bottom: 80px;
     padding-top: 60px;
 }
 
@@ -12,6 +11,11 @@
 .footer-links-wrapper .footer-links > div {
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 80px;
+}
+
+.footer-links-wrapper .footer-links > div > div {
+    width: 50%;
 }
 
 .footer-links-wrapper .footer-links > div:first-of-type > div {
