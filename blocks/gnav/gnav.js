@@ -160,7 +160,7 @@ class Gnav {
 
   decorateMenu = (navItem, navLink, menu) => {
     menu.className = 'gnav-navitem-menu';
-    const childCount = menu.querySelectorAll('li').length;
+    const childCount = 3;//menu.querySelectorAll('li').length;
     if (childCount === 1) {
       menu.classList.add('small-Variant');
     } else if (childCount === 2) {
