@@ -31,7 +31,7 @@ function buildArticleInfo(placeholders) {
 
   const articleInfoTime = document.createElement('div');
   articleInfoTime.classList.add('article-info-time');
-  articleInfoTime.textContent = `${parseTime(articletime)} ${placeholders.read}`;
+  articleInfoTime.textContent = `${parseTime(articletime, placeholders)} ${placeholders.read}`;
   const articleInfoTimeIcon = document.createElement('span');
   articleInfoTimeIcon.classList.add('icon');
   articleInfoTimeIcon.classList.add('icon-list');
