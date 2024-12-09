@@ -256,6 +256,7 @@ class Gnav {
 
   imsReady = async (blockEl, profileEl) => {
     const ioResp = await fetch(`/services/login/validate.json`);
+    const html = await resp.text();
     if (ioResp.isLoggedIn) {
       const profile = await import('./gnav-profile.js');
       profile.default(blockEl, profileEl, this.toggleMenu, ioResp);
