@@ -498,7 +498,7 @@ function decorateSections(main) {
  * @returns {object} Window placeholders object
  */
 // eslint-disable-next-line import/prefer-default-export
-async function fetchPlaceholders(prefix = 'default') {
+/*async function fetchPlaceholders(prefix = 'default') {
   window.placeholders = window.placeholders || {};
   if (!window.placeholders[prefix]) {
     window.placeholders[prefix] = new Promise((resolve) => {
@@ -527,6 +527,18 @@ async function fetchPlaceholders(prefix = 'default') {
     });
   }
   return window.placeholders[`${prefix}`];
+}*/
+
+export async function fetchPlaceholders() {
+  if (!window.placeholders) {
+    const resp = await fetch(`${getRootPath()}/placeholders.json`);
+    const json = await resp.json();
+    window.placeholders = {};
+    json.data.forEach((placeholder) => {
+      window.placeholders[placeholder.Key] = placeholder.Text;
+    });
+  }
+  return window.placeholders;
 }
 
 /**
