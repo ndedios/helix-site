@@ -60,6 +60,8 @@ footer .footer[data-block-status="loaded"] {
 
 body {
   margin-top: 100px !important;
+  margin-left: 0;
+  margin-right: 0;
   background-color: #fff;
   font-family: Averta-Regular, Arial, sans-serif;
   letter-spacing: normal;
