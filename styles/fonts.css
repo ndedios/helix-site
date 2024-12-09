@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Averta-Bold';
-  src: url('cme/common/recources/fonts/37E93D_0_0.eot');
-  src: url('cme/common/recources/fonts/37E93D_0_0.eot?#iefix') format('embedded-opentype'),
-    url('cme/common/recources/fonts/37E93D_0_0.woff2') format('woff2'),
-    url('cme/common/recources/fonts/37E93D_0_0.woff') format('woff'),
-    url('cme/common/recources/fonts/37E93D_0_0.ttf') format('truetype');
+  src: url('cme/common/resources/fonts/37E93D_0_0.eot');
+  src: url('cme/common/resources/fonts/37E93D_0_0.eot?#iefix') format('embedded-opentype'),
+    url('cme/common/resources/fonts/37E93D_0_0.woff2') format('woff2'),
+    url('cme/common/resources/fonts/37E93D_0_0.woff') format('woff'),
+    url('cme/common/resources/fonts/37E93D_0_0.ttf') format('truetype');
   font-display: swap;
   font-style: normal;
   font-weight: 600;
@@ -12,11 +12,11 @@
 
 @font-face {
   font-family: 'Averta';
-  src: url('cme/common/recources/fonts/37E93D_0_0.eot');
-  src: url('cme/common/recources/fonts/37E93D_0_0.eot?#iefix') format('embedded-opentype'),
-    url('cme/common/recources/fonts/37E93D_0_0.woff2') format('woff2'),
-    url('cme/common/recources/fonts/37E93D_0_0.woff') format('woff'),
-    url('cme/common/recources/fonts/37E93D_0_0.ttf') format('truetype');
+  src: url('cme/common/resources/fonts/37E93D_0_0.eot');
+  src: url('cme/common/resources/fonts/37E93D_0_0.eot?#iefix') format('embedded-opentype'),
+    url('cme/common/resources/fonts/37E93D_0_0.woff2') format('woff2'),
+    url('cme/common/resources/fonts/37E93D_0_0.woff') format('woff'),
+    url('cme/common/resources/fonts/37E93D_0_0.ttf') format('truetype');
   font-display: swap;
   font-style: normal;
   font-weight: 700;
@@ -24,11 +24,11 @@
 
 @font-face {
   font-family: 'Averta-Black';
-  src: url('cme/common/recources/fonts/37E93D_4_0.eot');
-  src: url('cme/common/recources/fonts/37E93D_4_0.eot?#iefix') format('embedded-opentype'),
-    url('cme/common/recources/fonts/37E93D_4_0.woff2') format('woff2'),
-    url('cme/common/recources/fonts/37E93D_4_0.woff') format('woff'),
-    url('cme/common/recources/fonts/37E93D_4_0.ttf') format('truetype');
+  src: url('cme/common/resources/fonts/37E93D_4_0.eot');
+  src: url('cme/common/resources/fonts/37E93D_4_0.eot?#iefix') format('embedded-opentype'),
+    url('cme/common/resources/fonts/37E93D_4_0.woff2') format('woff2'),
+    url('cme/common/resources/fonts/37E93D_4_0.woff') format('woff'),
+    url('cme/common/resources/fonts/37E93D_4_0.ttf') format('truetype');
   font-display: swap;
   font-style: normal;
   font-weight: 900;
@@ -36,11 +36,11 @@
 
 @font-face {
   font-family: 'Averta';
-  src: url('cme/common/recources/fonts/37E93D_4_0.eot');
-  src: url('cme/common/recources/fonts/37E93D_4_0.eot?#iefix') format('embedded-opentype'),
-    url('cme/common/recources/fonts/37E93D_4_0.woff2') format('woff2'),
-    url('cme/common/recources/fonts/37E93D_4_0.woff') format('woff'),
-    url('cme/common/recources/fonts/37E93D_4_0.ttf') format('truetype');
+  src: url('cme/common/resources/fonts/37E93D_4_0.eot');
+  src: url('cme/common/resources/fonts/37E93D_4_0.eot?#iefix') format('embedded-opentype'),
+    url('cme/common/resources/fonts/37E93D_4_0.woff2') format('woff2'),
+    url('cme/common/resources/fonts/37E93D_4_0.woff') format('woff'),
+    url('cme/common/resources/fonts/37E93D_4_0.ttf') format('truetype');
   font-display: swap;
   font-style: normal;
   font-weight: 900;
@@ -48,11 +48,11 @@
 
 @font-face {
   font-family: 'Averta-Regular';
-  src: url('cme/common/recources/fonts/37E93D_A_0.eot');
-  src: url('cme/common/recources/fonts/37E93D_A_0.eot?#iefix') format('embedded-opentype'),
-    url('cme/common/recources/fonts/37E93D_A_0.woff2') format('woff2'),
-    url('cme/common/recources/fonts/37E93D_A_0.woff') format('woff'),
-    url('cme/common/recources/fonts/37E93D_A_0.ttf') format('truetype');
+  src: url('cme/common/resources/fonts/37E93D_A_0.eot');
+  src: url('cme/common/resources/fonts/37E93D_A_0.eot?#iefix') format('embedded-opentype'),
+    url('cme/common/resources/fonts/37E93D_A_0.woff2') format('woff2'),
+    url('cme/common/resources/fonts/37E93D_A_0.woff') format('woff'),
+    url('cme/common/resources/fonts/37E93D_A_0.ttf') format('truetype');
   font-display: swap;
   font-style: normal;
   font-weight: 400;
@@ -60,11 +60,11 @@
 
 @font-face {
   font-family: 'Averta';
-  src: url('cme/common/recources/fonts/37E93D_A_0.eot');
-  src: url('cme/common/recources/fonts/37E93D_A_0.eot?#iefix') format('embedded-opentype'),
-    url('cme/common/recources/fonts/37E93D_A_0.woff2') format('woff2'),
-    url('cme/common/recources/fonts/37E93D_A_0.woff') format('woff'),
-    url('cme/common/recources/fonts/37E93D_A_0.ttf') format('truetype');
+  src: url('cme/common/resources/fonts/37E93D_A_0.eot');
+  src: url('cme/common/resources/fonts/37E93D_A_0.eot?#iefix') format('embedded-opentype'),
+    url('cme/common/resources/fonts/37E93D_A_0.woff2') format('woff2'),
+    url('cme/common/resources/fonts/37E93D_A_0.woff') format('woff'),
+    url('cme/common/resources/fonts/37E93D_A_0.ttf') format('truetype');
   font-display: swap;
   font-style: normal;
   font-weight: 400;
@@ -72,11 +72,11 @@
 
 @font-face {
   font-family: 'Averta-RegularItalic';
-  src: url('cme/common/recources/fonts/37E93D_B_0.eot');
-  src: url('cme/common/recources/fonts/37E93D_B_0.eot?#iefix') format('embedded-opentype'),
-    url('cme/common/recources/fonts/37E93D_B_0.woff2') format('woff2'),
-    url('cme/common/recources/fonts/37E93D_B_0.woff') format('woff'),
-    url('cme/common/recources/fonts/37E93D_B_0.ttf') format('truetype');
+  src: url('cme/common/resources/fonts/37E93D_B_0.eot');
+  src: url('cme/common/resources/fonts/37E93D_B_0.eot?#iefix') format('embedded-opentype'),
+    url('cme/common/resources/fonts/37E93D_B_0.woff2') format('woff2'),
+    url('cme/common/resources/fonts/37E93D_B_0.woff') format('woff'),
+    url('cme/common/resources/fonts/37E93D_B_0.ttf') format('truetype');
   font-display: swap;
   font-style: italic;
   font-weight: 400;
@@ -84,11 +84,11 @@
 
 @font-face {
   font-family: 'Averta';
-  src: url('cme/common/recources/fonts/37E93D_B_0.eot');
-  src: url('cme/common/recources/fonts/37E93D_B_0.eot?#iefix') format('embedded-opentype'),
-    url('cme/common/recources/fonts/37E93D_B_0.woff2') format('woff2'),
-    url('cme/common/recources/fonts/37E93D_B_0.woff') format('woff'),
-    url('cme/common/recources/fonts/37E93D_B_0.ttf') format('truetype');
+  src: url('cme/common/resources/fonts/37E93D_B_0.eot');
+  src: url('cme/common/resources/fonts/37E93D_B_0.eot?#iefix') format('embedded-opentype'),
+    url('cme/common/resources/fonts/37E93D_B_0.woff2') format('woff2'),
+    url('cme/common/resources/fonts/37E93D_B_0.woff') format('woff'),
+    url('cme/common/resources/fonts/37E93D_B_0.ttf') format('truetype');
   font-display: swap;
   font-style: italic;
   font-weight: 400;
@@ -96,11 +96,11 @@
 
 @font-face {
   font-family: 'Averta-Semibold';
-  src: url('cme/common/recources/fonts/37E93D_C_0.eot');
-  src: url('cme/common/recources/fonts/37E93D_C_0.eot?#iefix') format('embedded-opentype'),
-    url('cme/common/recources/fonts/37E93D_C_0.woff2') format('woff2'),
-    url('cme/common/recources/fonts/37E93D_C_0.woff') format('woff'),
-    url('cme/common/recources/fonts/37E93D_C_0.ttf') format('truetype');
+  src: url('cme/common/resources/fonts/37E93D_C_0.eot');
+  src: url('cme/common/resources/fonts/37E93D_C_0.eot?#iefix') format('embedded-opentype'),
+    url('cme/common/resources/fonts/37E93D_C_0.woff2') format('woff2'),
+    url('cme/common/resources/fonts/37E93D_C_0.woff') format('woff'),
+    url('cme/common/resources/fonts/37E93D_C_0.ttf') format('truetype');
   font-display: swap;
   font-style: normal;
   font-weight: 600;
@@ -108,11 +108,11 @@
 
 @font-face {
   font-family: 'Averta';
-  src: url('cme/common/recources/fonts/37E93D_C_0.eot');
-  src: url('cme/common/recources/fonts/37E93D_C_0.eot?#iefix') format('embedded-opentype'),
-    url('cme/common/recources/fonts/37E93D_C_0.woff2') format('woff2'),
-    url('cme/common/recources/fonts/37E93D_C_0.woff') format('woff'),
-    url('cme/common/recources/fonts/37E93D_C_0.ttf') format('truetype');
+  src: url('cme/common/resources/fonts/37E93D_C_0.eot');
+  src: url('cme/common/resources/fonts/37E93D_C_0.eot?#iefix') format('embedded-opentype'),
+    url('cme/common/resources/fonts/37E93D_C_0.woff2') format('woff2'),
+    url('cme/common/resources/fonts/37E93D_C_0.woff') format('woff'),
+    url('cme/common/resources/fonts/37E93D_C_0.ttf') format('truetype');
   font-display: swap;
   font-style: normal;
   font-weight: 600;
