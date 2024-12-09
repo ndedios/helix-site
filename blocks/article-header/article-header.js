@@ -1,7 +1,8 @@
-import { getMetadata } from '../../scripts/aem.js';
+import { getMetadata, fetchPlaceholders } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
-export function parseTime(time) {
+export async function parseTime(time) {
+  const placeholders = await fetchPlaceholders();
   if (!time) {
     return '';
   }
@@ -20,18 +21,19 @@ export function parseTime(time) {
     hours = Math.floor(timeInMins / 60);
     mins = timeInMins % 60;
     const timeInHours = mins > 30 ? hours + 1 : hours;
-    return timeInHours + ' hour';
+    return timeInHours + ` ${placeholders.hour}`;
   }
-  return timeInMins + ' min';
+  return timeInMins + ` ${placeholders.min}`;
 }
 
-function buildArticleInfo() {
+async function buildArticleInfo() {
+  const placeholders = await fetchPlaceholders();
   const primarytopic = getMetadata('primarytopic');
   const articletime = getMetadata('articletime');
 
   const articleInfoTime = document.createElement('div');
   articleInfoTime.classList.add('article-info-time');
-  articleInfoTime.textContent = `${parseTime(articletime)} read`;
+  articleInfoTime.textContent = `${parseTime(articletime)} ${placeholders.read}`;
   const articleInfoTimeIcon = document.createElement('span');
   articleInfoTimeIcon.classList.add('icon');
   articleInfoTimeIcon.classList.add('icon-list');
@@ -44,7 +46,7 @@ function buildArticleInfo() {
 
   const articleInfoBookmark = document.createElement('div');
   articleInfoBookmark.classList.add('article-info-bookmark');
-  articleInfoBookmark.textContent = 'Save';
+  articleInfoBookmark.textContent = placeholders.save;
   const articleInfoBookmarkIcon = document.createElement('span');
   articleInfoBookmarkIcon.classList.add('icon');
   articleInfoBookmarkIcon.classList.add('icon-bookmark-outlined');
@@ -59,7 +61,8 @@ function buildArticleInfo() {
   return articleInfo;
 }
 
-function buildArticleData() {
+async function buildArticleData() {
+  const placeholders = await fetchPlaceholders();
   const author = getMetadata('author');
   const authorurl = getMetadata('authorurl');
   const effectivedate = getMetadata('effectivedate');
@@ -70,7 +73,7 @@ function buildArticleData() {
 
   const articleDataAuthor = document.createElement('div');
   articleDataAuthor.classList.add('article-data-author');
-  articleDataAuthor.textContent = 'By ';
+  articleDataAuthor.textContent = `${placeholders.by} `;
   articleDataAuthor.append(articleDataAuthorLink);
 
   const articleDataDate = document.createElement('div');
