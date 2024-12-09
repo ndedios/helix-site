@@ -14,7 +14,7 @@
     flex-wrap: wrap;
 }
 
-.footer-links-wrapper .footer-links > div > div {
+.footer-links-wrapper .footer-links > div:first-of-type > div {
     width: 25%;
 }
 
