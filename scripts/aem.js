@@ -10,6 +10,47 @@
  * governing permissions and limitations under the License.
  */
 
+
+const LANG = {
+  EN: 'en',
+  DE: 'de',
+  FR: 'fr',
+  KO: 'ko',
+  ES: 'es',
+  IT: 'it',
+  JP: 'jp',
+  BR: 'br',
+};
+
+const LANG_LOCALE = {
+  en: 'en_US',
+  de: 'de_DE',
+  fr: 'fr_FR',
+  ko: 'ko_KR',
+  es: 'es_ES',
+  it: 'it_IT',
+  jp: 'ja_JP',
+  br: 'pt_BR',
+};
+
+let language;
+
+export function getLanguage() {
+  if (language) return language;
+  language = LANG.EN;
+  const segs = window.location.pathname.split('/');
+  if (segs && segs.length > 0) {
+    // eslint-disable-next-line no-restricted-syntax
+    for (const [, value] of Object.entries(LANG)) {
+      if (value === segs[1]) {
+        language = value;
+        break;
+      }
+    }
+  }
+  return language;
+}
+
 /* eslint-env browser */
 function sampleRUM(checkpoint, data) {
   // eslint-disable-next-line max-len
@@ -539,6 +580,15 @@ async function fetchPlaceholders() {
     });
   }
   return window.placeholders;
+}
+
+/**
+ * Returns the language dependent root path
+ * @returns {string} The computed root path
+ */
+function getRootPath() {
+  const loc = getLanguage();
+  return `/${loc}`;
 }
 
 /**
