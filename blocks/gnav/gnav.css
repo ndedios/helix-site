@@ -434,9 +434,21 @@ button.gnav-toggle:after {
 }
 
 .gnav-profile .gnav-signin {
-  display: flex;
-  align-items: center;
-  font-size: 14px;
+  border-color: #3cc8ff !important;
+  background-color: transparent;
+  border-radius: .25rem;
+  display: inline-block;
+  text-transform: uppercase;
+  vertical-align: middle;
+  border: .125rem solid;
+  box-shadow: none;
+  font-size: .75rem;
+  letter-spacing: .09375rem;
+  line-height: .75rem;
+  margin: auto;
+  padding: .75rem 2rem;
+  font-family: Averta;
+  font-weight: 700;
 }
 
 .gnav-profile .gnav-profile-button {

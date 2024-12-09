@@ -233,12 +233,12 @@ class Gnav {
     this.onSearchInput = gnavSearch.default;
   }
 
-  decorateProfile = () => {
+  decorateProfile = async () => {
     const blockEl = this.body.querySelector('.profile');
     if (!blockEl) return null;
     const profileEl = createTag('div', { class: 'gnav-profile' });
 
-    window.adobeid = {
+    /*window.adobeid = {
       client_id: 'theblog-helix',
       scope: 'AdobeID,openid,gnav',
       locale: 'en',
@@ -248,22 +248,17 @@ class Gnav {
       onReady: () => { this.imsReady(blockEl, profileEl); },
     };
     loadScript('https://auth.services.adobe.com/imslib/imslib.min.js');
+    */
+    this.imsReady(blockEl, profileEl);
 
     return profileEl;
   }
 
   imsReady = async (blockEl, profileEl) => {
-    const accessToken = window.adobeIMS.getAccessToken();
-    if (accessToken) {
-      const ioResp = await fetch(`https://${this.env.adobeIO}/profile`, {
-        headers: new Headers({ Authorization: `Bearer ${accessToken.token}` }),
-      });
-      if (ioResp.status === 200) {
-        const profile = await import('./gnav-profile.js');
-        profile.default(blockEl, profileEl, this.toggleMenu, ioResp);
-      } else {
-        this.decorateSignIn(blockEl, profileEl);
-      }
+    const ioResp = await fetch(`/services/login/validate`);
+    if (ioResp.isLoggedIn) {
+      const profile = await import('./gnav-profile.js');
+      profile.default(blockEl, profileEl, this.toggleMenu, ioResp);
     } else {
       this.decorateSignIn(blockEl, profileEl);
     }
@@ -275,7 +270,7 @@ class Gnav {
     profileEl.append(signIn);
     profileEl.addEventListener('click', (e) => {
       e.preventDefault();
-      window.adobeIMS.signIn();
+      //window.adobeIMS.signIn();
     });
   }
 
