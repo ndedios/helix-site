@@ -1,8 +1,7 @@
 import { getMetadata, fetchPlaceholders } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
-export async function parseTime(time) {
-  const placeholders = await fetchPlaceholders();
+export function parseTime(time, placeholders) {
   if (!time) {
     return '';
   }
@@ -26,8 +25,7 @@ export async function parseTime(time) {
   return timeInMins + ` ${placeholders.min}`;
 }
 
-async function buildArticleInfo() {
-  const placeholders = await fetchPlaceholders();
+async function buildArticleInfo(placeholders) {
   const primarytopic = getMetadata('primarytopic');
   const articletime = getMetadata('articletime');
 
@@ -61,8 +59,7 @@ async function buildArticleInfo() {
   return articleInfo;
 }
 
-async function buildArticleData() {
-  const placeholders = await fetchPlaceholders();
+async function buildArticleData(placeholders) {
   const author = getMetadata('author');
   const authorurl = getMetadata('authorurl');
   const effectivedate = getMetadata('effectivedate');
@@ -105,11 +102,12 @@ function buildBase(block) {
  */
 export default async function decorate(block) {
   buildBase(block);
-
-  const articleInfoWrapper = document.createElement('div');
-  articleInfoWrapper.classList.add('default-content-wrapper');
-  articleInfoWrapper.append(buildArticleInfo());
-  articleInfoWrapper.append(block.querySelector('h1'));
-  articleInfoWrapper.append(buildArticleData());
-  block.append(articleInfoWrapper);
+  fetchPlaceholders().then((placeholders) => {
+    const articleInfoWrapper = document.createElement('div');
+    articleInfoWrapper.classList.add('default-content-wrapper');
+    articleInfoWrapper.append(buildArticleInfo(placeholders));
+    articleInfoWrapper.append(block.querySelector('h1'));
+    articleInfoWrapper.append(buildArticleData(placeholders));
+    block.append(articleInfoWrapper);
+  });
 }
