@@ -41,3 +41,25 @@
     color: #112b4a;
     text-decoration: none;
 }
+
+.footer-disclaimer-wrapper {
+    background-color: #3A464F;
+    padding-bottom: 2.75rem;
+    padding-top: 3.75rem;
+}
+
+.footer-disclaimer-wrapper .footer-disclaimer {
+    padding-left: 88px;
+    padding-right: 88px;
+}
+
+.footer-disclaimer-wrapper .footer-disclaimer p {
+    margin: 0;
+    color: #fff;
+    font-size: .75rem;
+    line-height: 1rem;
+    font-family: Averta;
+    font-weight: 400;
+    letter-spacing: .03em;
+    margin-bottom: 1.875rem;
+}
