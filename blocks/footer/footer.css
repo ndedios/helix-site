@@ -28,6 +28,11 @@
     text-transform: uppercase;
 }
 
+.footer-links-wrapper .footer-links h6 .icon {
+    display: inline-block;
+    margin: 0 10px 10px 0;
+}
+
 .footer-links-wrapper .footer-links p {
     font-family: Averta;
     font-size: 1rem;
