@@ -233,7 +233,7 @@ class Gnav {
     this.onSearchInput = gnavSearch.default;
   }
 
-  decorateProfile = async () => {
+  decorateProfile = () => {
     const blockEl = this.body.querySelector('.profile');
     if (!blockEl) return null;
     const profileEl = createTag('div', { class: 'gnav-profile' });
