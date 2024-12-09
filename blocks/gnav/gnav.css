@@ -157,11 +157,9 @@ button.gnav-toggle:after {
 }
 
 .gnav-navitem.has-Menu.is-Open > a {
-  padding: 20px 24px;
   font-weight: 700;
   position: relative;
   border-bottom: none;
-  background-color: #FAFAFA;
 }
 
 .gnav-navitem.has-Menu.is-Open > a:before {
@@ -587,7 +585,6 @@ button.gnav-toggle:after {
 
   .gnav-navitem.has-Menu.is-Open > a {
     font-weight: unset;
-    padding: 20px;
   }
   
 
