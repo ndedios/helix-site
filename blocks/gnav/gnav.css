@@ -173,7 +173,7 @@ button.gnav-toggle:after {
 }
 
 .gnav-navitem > a:hover {
-  background-color: #FAFAFA;
+  color: #3cc8ff;
 }
 
 .gnav-navitem > a {
