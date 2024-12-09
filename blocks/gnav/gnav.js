@@ -256,13 +256,22 @@ class Gnav {
 
   imsReady = async (blockEl, profileEl) => {
     const ioResp = await fetch(`/services/login/validate.json`);
-    const html = await ioResp.text();
     if (ioResp.isLoggedIn) {
       const profile = await import('./gnav-profile.js');
       profile.default(blockEl, profileEl, this.toggleMenu, ioResp);
     } else {
       this.decorateSignIn(blockEl, profileEl);
     }
+
+    const response = await fetch(`/services/login/validate.json`);
+    response.json().then((data) => {
+      if (data.isLoggedIn) {
+        const profile = import('./gnav-profile.js');
+        profile.default(blockEl, profileEl, this.toggleMenu, ioResp);
+      } else {
+        this.decorateSignIn(blockEl, profileEl);
+      }
+    });
   }
 
   decorateSignIn = (blockEl, profileEl) => {
