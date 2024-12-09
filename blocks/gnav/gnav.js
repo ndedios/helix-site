@@ -255,14 +255,6 @@ class Gnav {
   }
 
   imsReady = async (blockEl, profileEl) => {
-    const ioResp = await fetch(`/services/login/validate.json`);
-    if (ioResp.isLoggedIn) {
-      const profile = await import('./gnav-profile.js');
-      profile.default(blockEl, profileEl, this.toggleMenu, ioResp);
-    } else {
-      this.decorateSignIn(blockEl, profileEl);
-    }
-
     const response = await fetch(`/services/login/validate.json`);
     response.json().then((data) => {
       if (data.isLoggedIn) {
