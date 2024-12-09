@@ -100,14 +100,13 @@ function buildBase(block) {
  * loads and decorates the article header
  * @param {Element} block The block element
  */
-export default function decorate(block) {
+export default async function decorate(block) {
   buildBase(block);
-  fetchPlaceholders().then((placeholders) => {
-    const articleInfoWrapper = document.createElement('div');
-    articleInfoWrapper.classList.add('default-content-wrapper');
-    articleInfoWrapper.append(buildArticleInfo(placeholders));
-    articleInfoWrapper.append(block.querySelector('h1'));
-    articleInfoWrapper.append(buildArticleData(placeholders));
-    block.append(articleInfoWrapper);
-  });
+  const placeholders = await fetchPlaceholders();
+  const articleInfoWrapper = document.createElement('div');
+  articleInfoWrapper.classList.add('default-content-wrapper');
+  articleInfoWrapper.append(buildArticleInfo(placeholders));
+  articleInfoWrapper.append(block.querySelector('h1'));
+  articleInfoWrapper.append(buildArticleData(placeholders));
+  block.append(articleInfoWrapper);
 }
