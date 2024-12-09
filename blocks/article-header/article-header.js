@@ -25,7 +25,7 @@ export function parseTime(time, placeholders) {
   return timeInMins + ` ${placeholders.min}`;
 }
 
-async function buildArticleInfo(placeholders) {
+function buildArticleInfo(placeholders) {
   const primarytopic = getMetadata('primarytopic');
   const articletime = getMetadata('articletime');
 
@@ -59,7 +59,7 @@ async function buildArticleInfo(placeholders) {
   return articleInfo;
 }
 
-async function buildArticleData(placeholders) {
+function buildArticleData(placeholders) {
   const author = getMetadata('author');
   const authorurl = getMetadata('authorurl');
   const effectivedate = getMetadata('effectivedate');
@@ -100,7 +100,7 @@ function buildBase(block) {
  * loads and decorates the article header
  * @param {Element} block The block element
  */
-export default async function decorate(block) {
+export default function decorate(block) {
   buildBase(block);
   fetchPlaceholders().then((placeholders) => {
     const articleInfoWrapper = document.createElement('div');
