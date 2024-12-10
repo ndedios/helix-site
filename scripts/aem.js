@@ -583,7 +583,7 @@ async function fetchPlaceholders() {
 }
 
 async function fetchTags() {
-  if (!window.placeholders) {
+  if (!window.tags) {
     const resp = await fetch(`/tags.json`);
     const json = await resp.json();
     window.tags = {};
