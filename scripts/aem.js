@@ -588,7 +588,7 @@ async function fetchTags() {
     const json = await resp.json();
     window.tags = {};
     json.data.forEach((tag) => {
-      window.tags[tag.tag] = placeholder.title;
+      window.tags[tag.tag] = tag.title;
     });
   }
   return window.tags;
