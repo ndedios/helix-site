@@ -582,6 +582,19 @@ async function fetchPlaceholders() {
   return window.placeholders;
 }
 
+async function fetchTags() {
+  if (!window.placeholders) {
+    const resp = await fetch(`/tags.json`);
+    const json = await resp.json();
+    window.tags = {};
+    json.data.forEach((tag) => {
+      window.tags[tag.tag] = placeholder.title;
+    });
+  }
+  return window.tags;
+}
+
+
 /**
  * Returns the language dependent root path
  * @returns {string} The computed root path
@@ -774,6 +787,7 @@ export {
   decorateSections,
   decorateTemplateAndTheme,
   fetchPlaceholders,
+  fetchTags,
   getMetadata,
   loadBlock,
   loadCSS,

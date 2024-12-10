@@ -1,4 +1,4 @@
-import { getMetadata, fetchPlaceholders } from '../../scripts/aem.js';
+import { getMetadata, fetchPlaceholders, fetchTags } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 export function parseTime(time, placeholders) {
@@ -25,10 +25,11 @@ export function parseTime(time, placeholders) {
   return timeInMins + ` ${placeholders.min}`;
 }
 
-function buildArticleInfo(placeholders) {
-  const primarytopic = getMetadata('primarytopic');
+function buildArticleInfo(placeholders, tags) {
+  let primarytopic = getMetadata('primarytopic');
   const articletime = getMetadata('articletime');
 
+  primarytopic = tags[primarytopic] ? tags[primarytopic] : primarytopic;
   const articleInfoTime = document.createElement('div');
   articleInfoTime.classList.add('article-info-time');
   articleInfoTime.textContent = `${parseTime(articletime, placeholders)} ${placeholders.read}`;
@@ -59,10 +60,12 @@ function buildArticleInfo(placeholders) {
   return articleInfo;
 }
 
-function buildArticleData(placeholders) {
-  const author = getMetadata('author');
+function buildArticleData(placeholders, tags) {
+  let author = getMetadata('author');
   const authorurl = getMetadata('authorurl');
   const effectivedate = getMetadata('effectivedate');
+
+  author = tags[author] ? tags[author] : author;
 
   const articleDataAuthorLink = document.createElement('a');
   articleDataAuthorLink.textContent = author;
@@ -103,10 +106,11 @@ function buildBase(block) {
 export default async function decorate(block) {
   buildBase(block);
   const placeholders = await fetchPlaceholders();
+  const tags = await fetchTags();
   const articleInfoWrapper = document.createElement('div');
   articleInfoWrapper.classList.add('default-content-wrapper');
-  articleInfoWrapper.append(buildArticleInfo(placeholders));
+  articleInfoWrapper.append(buildArticleInfo(placeholders, tags));
   articleInfoWrapper.append(block.querySelector('h1'));
-  articleInfoWrapper.append(buildArticleData(placeholders));
+  articleInfoWrapper.append(buildArticleData(placeholders, tags));
   block.append(articleInfoWrapper);
 }
