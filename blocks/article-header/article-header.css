@@ -86,6 +86,7 @@
 
 .article-header .article-data .article-data-author a {
     color: #006eb6;
+    text-decoration: none;
 }
 
 .article-header .article-data .article-data-date {
