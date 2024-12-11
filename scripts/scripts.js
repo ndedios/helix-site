@@ -57,7 +57,7 @@ function buildArticleHeader(main) {
 async function openModal(e) {
   const img = e.target.closest('picture').querySelector('img').src;
   const { openModal } = await import(`${window.hlx.codeBasePath}/blocks/modal/modal.js`);
-  openModal(origin.href);
+  openModal(img);
 }
 
 function buildImages(main) {
