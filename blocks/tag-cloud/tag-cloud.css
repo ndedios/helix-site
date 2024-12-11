@@ -23,3 +23,8 @@ main > .section .tag-cloud-wrapper {
     margin-bottom: .625rem;
     margin-right: .3125rem;
 }
+
+.tag-cloud .tag-label {
+    padding: .1875rem .3125rem .1875rem 0;
+    font-size: .875rem;
+}

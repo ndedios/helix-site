@@ -4,7 +4,8 @@ function buildTagList(placeholders, tags){
   const taglist = getMetadata('article:tag');
   if (!taglist) return;
   const container = document.createElement('div');
-  const title = document.createElement('div');
+  const title = document.createElement('span');
+  title.classList.add('tag-label');
   title.textContent = `${placeholders['tags']}:`;
   container.append(title);
   taglist.split(',').forEach((tag) => {
