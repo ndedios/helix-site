@@ -594,6 +594,19 @@ async function fetchTags() {
   return window.tags;
 }
 
+async function fetchAuthors() {
+  if (!window.authors) {
+    const resp = await fetch(`/authors.json`);
+    const json = await resp.json();
+    window.authors = {};
+    json.data.forEach((author) => {
+      window.authors[author.tag] = author;
+    });
+  }
+  return window.authors;
+}
+
+
 
 /**
  * Returns the language dependent root path

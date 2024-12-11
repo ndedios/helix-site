@@ -1,4 +1,4 @@
-import { getMetadata, fetchPlaceholders, fetchTags } from '../../scripts/aem.js';
+import { getMetadata, fetchPlaceholders, fetchTags, fetchAuthors } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 export function parseTime(time, placeholders) {
@@ -60,15 +60,14 @@ function buildArticleInfo(placeholders, tags) {
   return articleInfo;
 }
 
-function buildArticleData(placeholders, tags) {
-  let author = getMetadata('author');
-  const authorurl = getMetadata('authorurl');
+function buildArticleData(placeholders, authors) {
+  const author = getMetadata('author');
+  const authorName = authors[author] ? authors[author].name : author;
+  const authorurl = authors[author] ? authors[author].bioPage : '';
   const effectivedate = getMetadata('effectivedate');
 
-  author = tags[author] ? tags[author] : author;
-
   const articleDataAuthorLink = document.createElement('a');
-  articleDataAuthorLink.textContent = author;
+  articleDataAuthorLink.textContent = authorName;
   articleDataAuthorLink.setAttribute('href', authorurl);
 
   const articleDataAuthor = document.createElement('div');
@@ -107,10 +106,11 @@ export default async function decorate(block) {
   buildBase(block);
   const placeholders = await fetchPlaceholders();
   const tags = await fetchTags();
+  const authors = await fetchAuthors();
   const articleInfoWrapper = document.createElement('div');
   articleInfoWrapper.classList.add('default-content-wrapper');
   articleInfoWrapper.append(buildArticleInfo(placeholders, tags));
   articleInfoWrapper.append(block.querySelector('h1'));
-  articleInfoWrapper.append(buildArticleData(placeholders, tags));
+  articleInfoWrapper.append(buildArticleData(placeholders, authors));
   block.append(articleInfoWrapper);
 }
