@@ -55,7 +55,7 @@ function buildArticleHeader(main) {
 }
 
 function buildImages(main) {
-  const pictures = main.querySelectorAll('picture');
+  const pictures = [...main.querySelectorAll('picture')];
   pictures.shift(); //Skip article banner
   pictures.forEach((picture) => {
     const magnify = document.createElement('span');
