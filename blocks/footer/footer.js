@@ -1,6 +1,49 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
+function closeMenu(el) {
+  el.setAttribute('aria-expanded', false);
+}
+
+function openMenu(el) {
+  const expandedMenu = document.querySelector('.filter-button[aria-expanded=true]');
+  if (expandedMenu) { closeMenu(expandedMenu); }
+  el.setAttribute('aria-expanded', true);
+}
+
+function closeOnDocClick(e) {
+  const { target } = e;
+  const curtain = document.querySelector('.filter-curtain');
+  if (target === curtain) {
+    const open = document.querySelector('.filter-button[aria-expanded=true]');
+    closeMenu(open);
+    curtain.classList.add('hide');
+  }
+}
+
+function closeCurtain() {
+  const curtain = document.querySelector('.filter-curtain');
+  curtain.classList.add('hide');
+  window.removeEventListener('click', closeOnDocClick);
+}
+
+function openCurtain() {
+  const curtain = document.querySelector('.filter-curtain');
+  curtain.classList.remove('hide');
+  window.addEventListener('click', closeOnDocClick);
+}
+
+function toggleMenu(e) {
+  const button = e.target.closest('[role=button]');
+  const expanded = button.getAttribute('aria-expanded');
+  if (expanded === 'true') {
+    closeMenu(button);
+    closeCurtain();
+  } else {
+    openMenu(button);
+    openCurtain();
+  }
+}
 
 function buildLanugageSelector(footer) {
   const container = document.createElement('div');
