@@ -3,3 +3,17 @@ main > .section .author-bio-wrapper {
     background-color: #fff;
     padding: 0 109px;
 }
+
+.author-bio .author-info {
+    display: flex;
+    margin-bottom: 2.75rem;
+}
+
+.author-bio .author-image {
+    border-radius: 50%;
+    display: block;
+    height: 5.3125rem;
+    margin-right: .625rem;
+    min-width: 5.3125rem;
+    width: 5.3125rem;
+}

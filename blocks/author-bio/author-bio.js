@@ -6,6 +6,11 @@ function buildAutorBio(authors){
   const authorBio = authors[author];
   if (!authorBio) return;
   const container = document.createElement('div');
+  container.classList.add('author-info');
+  const image = document.createElement('img');
+  image.classList.add('author-image');
+  image.src = authorBio.image;
+  container.append(image);
   return container;
 }
 
