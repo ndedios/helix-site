@@ -212,6 +212,9 @@ function cmeLazyScripts() {
     s.async = true;
     a.getElementsByTagName('head')[0].appendChild(s);
     m.mazeUniversalSnippetApiKey = e;
+
+    //recaptcha
+    import('https://www.google.com/recaptcha/api.js?render=explicit');
   })(window, document, 'https://snippet.maze.co/maze-universal-loader.js', '38dab2d6-19d2-4393-9831-871dcd99ab98');
 
   
