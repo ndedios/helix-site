@@ -151,6 +151,13 @@ header {
   z-index: 3;
 }
 
+picture.magnify-image {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+}
+
 picture .magnify-icon {
   align-items: center;
     background: hsla(0, 0%, 100%, .55);
@@ -172,4 +179,8 @@ picture .magnify-icon {
     line-height: 1;
     text-transform: none;
     -webkit-font-smoothing: antialiased;
+}
+
+picture .magnify-icon:hover {
+  color: #3cc8ff;
 }

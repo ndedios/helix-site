@@ -54,6 +54,10 @@ function buildArticleHeader(main) {
   }
 }
 
+function openModal(e) {
+  const button = e.target;
+}
+
 function buildImages(main) {
   const pictures = [...main.querySelectorAll('picture')];
   pictures.shift(); //Skip article banner
@@ -62,6 +66,8 @@ function buildImages(main) {
     magnify.classList.add('magnify-icon');
     magnify.textContent = 'view'
     picture.append(magnify);
+    picture.classList.add('magnify-image');
+    picture.addEventListener('click', openModal);
   });
 }
 
