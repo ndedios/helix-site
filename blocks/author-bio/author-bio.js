@@ -7,10 +7,23 @@ function buildAutorBio(authors){
   if (!authorBio) return;
   const container = document.createElement('div');
   container.classList.add('author-info');
+
   const image = document.createElement('img');
   image.classList.add('author-image');
   image.src = authorBio.image;
   container.append(image);
+
+  const info = document.createElement('div');
+  const eyebrow = document.createElement('div');
+  eyebrow.classList.add('author-eyebrow');
+  eyebrow.textContent = `${authorBio.name}, ${authorBio.role}, ${authorBio.company}`;
+  info.append(eyebrow);
+  const bio = document.createElement('div');
+  bio.classList.add('author-bio');
+  bio.textContent = authorBio.bio;
+  info.append(bio);
+  container.append(info);
+
   return container;
 }
 

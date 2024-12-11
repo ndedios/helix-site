@@ -17,3 +17,17 @@ main > .section .author-bio-wrapper {
     min-width: 5.3125rem;
     width: 5.3125rem;
 }
+
+.author-bio .author-eyebrow {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    display: inline;
+    font-family: Averta;
+    font-weight: 700;
+}
+
+.author-bio .author-bio {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    display: inline;
+}
