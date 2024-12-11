@@ -150,3 +150,26 @@ header {
   background-color: var(--color-white);
   z-index: 3;
 }
+
+picture .magnify-icon {
+  align-items: center;
+    background: hsla(0, 0%, 100%, .55);
+    color: #006eb6;
+    display: flex;
+    font-family: CMEGroup-Icons !important;
+    font-size: .875rem;
+    height: 2.5rem;
+    justify-content: center;
+    line-height: normal;
+    position: absolute;
+    right: 1.25rem;
+    top: 1.25rem;
+    width: 2.5rem;
+    speak: none;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+}

@@ -54,6 +54,17 @@ function buildArticleHeader(main) {
   }
 }
 
+function buildImages(main) {
+  const pictures = main.querySelectorAll('picture');
+  pictures.shift(); //Skip article banner
+  pictures.forEach((picture) => {
+    const magnify = document.createElement('span');
+    magnify.classList.add('magnify-icon');
+    magnify.textContent = 'view'
+    picture.append(magnify);
+  });
+}
+
 /**
  * load fonts.css and set a session storage flag
  */
@@ -74,6 +85,7 @@ function buildAutoBlocks(main) {
   try {
     buildArticleHeader(main);
     buildDynamicAlertList(main);
+    buildImages(main);
     //buildHeroBlock(main);
   } catch (error) {
     // eslint-disable-next-line no-console
