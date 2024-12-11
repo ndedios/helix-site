@@ -12,7 +12,7 @@ function buildLanugageSelector(footer) {
   button.setAttribute('aria-haspopup', true);
   button.setAttribute('aria-expanded', false);
   button.setAttribute('role', 'button');
-  button.textContent = tax.getCategoryTitle(type);
+  button.textContent = 'English';
   button.addEventListener('click', toggleMenu);
 
   const dropdown = document.createElement('div');
