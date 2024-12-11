@@ -40,9 +40,11 @@ function buildLanugageSelector(footer) {
   dropdown.setAttribute('role', 'menu');
 
   const languages = footer.querySelector('.footer-links ul');
+  languages.remove();
+  languages.classList.add('filter-options');
+  dropdown.append(languages);
   languages.parentElement.append(container);
   container.append(button, dropdown);
-  languages.remove();
 }
 
 /**
