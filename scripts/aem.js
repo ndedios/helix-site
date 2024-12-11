@@ -801,6 +801,7 @@ export {
   decorateTemplateAndTheme,
   fetchPlaceholders,
   fetchTags,
+  fetchAuthors,
   getMetadata,
   loadBlock,
   loadCSS,
