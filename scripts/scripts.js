@@ -54,8 +54,10 @@ function buildArticleHeader(main) {
   }
 }
 
-function openModal(e) {
-  const button = e.target;
+async function openModal(e) {
+  const img = e.target.closest('picture').querySelector('img').src;
+  const { openModal } = await import(`${window.hlx.codeBasePath}/blocks/modal/modal.js`);
+  openModal(origin.href);
 }
 
 function buildImages(main) {
