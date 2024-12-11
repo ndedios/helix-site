@@ -56,8 +56,11 @@ function buildArticleHeader(main) {
 
 async function openModal(e) {
   const img = e.target.closest('picture').querySelector('img').src;
-  const { openModal } = await import(`${window.hlx.codeBasePath}/blocks/modal/modal.js`);
-  openModal(img);
+  const { createModal } = await import(`${window.hlx.codeBasePath}/blocks/modal/modal.js`);
+  const newImage = document.createElement('img');
+  newImage.src = img;
+  const { showModal } = await createModal(newImage);
+  showModal();
 }
 
 function buildImages(main) {
