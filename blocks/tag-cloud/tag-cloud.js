@@ -5,7 +5,7 @@ function buildTagList(placeholders, tags){
   if (!taglist) return;
   const container = document.createElement('div');
   taglist.split(',').forEach((tag) => {
-    const tagName = tags[tag] ? tags[tag] : tag;
+    const tagName = tags[tag.trim()] ? tags[tag.trim()] : tag.trim();
     const button = document.createElement('button');
     button.classList.add('btn-tag-filter');
     button.textContent = tagName;

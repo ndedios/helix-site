@@ -20,4 +20,6 @@ main > .section .tag-cloud-wrapper {
     margin-right: 0;
     padding: .1875rem .25rem;
     text-transform: none;
+    margin-bottom: .625rem;
+    margin-right: .3125rem;
 }
