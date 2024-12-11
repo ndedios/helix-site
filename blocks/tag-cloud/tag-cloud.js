@@ -19,7 +19,6 @@ function buildTagList(placeholders, tags){
  * @param {Element} block The block element
  */
 export default async function decorate(block) {
-  buildBase(block);
   const placeholders = await fetchPlaceholders();
   const tags = await fetchTags();
   block.append(buildTagList(placeholders, tags));
