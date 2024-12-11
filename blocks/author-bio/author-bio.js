@@ -1,6 +1,6 @@
 import { getMetadata, fetchAuthors } from '../../scripts/aem.js';
 
-function buildTagList(authors){
+function buildAutorBio(authors){
   const author = getMetadata('author');
   if (!author) return;
   const authorBio = authors[author];
