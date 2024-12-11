@@ -59,7 +59,9 @@ async function openModal(e) {
   const { createModal } = await import(`${window.hlx.codeBasePath}/blocks/modal/modal.js`);
   const newImage = document.createElement('img');
   newImage.src = img;
-  const { showModal } = await createModal(newImage);
+  const div = document.createElement('div');
+  div.append(newImage);
+  const { showModal } = await createModal(div.childNodes);
   showModal();
 }
 
