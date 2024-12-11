@@ -1,0 +1,23 @@
+main > .section .tag-cloud-wrapper {
+    width: 748px;
+    background-color: #fff;
+    padding: 0 109px;
+}
+
+.tag-cloud .btn-tag-filter {
+    background-color: #ebedee;
+    border-radius: 0;
+    border-width: 0;
+    box-shadow: none;
+    color: #006eb6;
+    font-family: Averta;
+    font-size: .875rem;
+    font-weight: 400;
+    height: auto;
+    letter-spacing: normal;
+    line-height: .9375rem;
+    margin-bottom: 0;
+    margin-right: 0;
+    padding: .1875rem .25rem;
+    text-transform: none;
+}
