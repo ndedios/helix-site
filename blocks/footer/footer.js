@@ -64,7 +64,9 @@ function buildLanugageSelector(footer) {
   dropdown.setAttribute('role', 'menu');
 
   const languages = footer.querySelector('.footer-links ul');
-  languages.parentElement.append(button);
+  languages.parentElement.append(container);
+  container.append(button, dropdown);
+  languages.remove();
 }
 
 /**
