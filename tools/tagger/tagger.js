@@ -1,7 +1,6 @@
 import { fetchTags } from '/scripts/aem.js';
 
-async function buildTagger() {
-    const tags = await fetchTags();
+function buildTagger(tags) {
     const container = document.createElement('div');
     tags.forEach((tag) => {
         const divTag = document.createElement('div');
@@ -12,8 +11,9 @@ async function buildTagger() {
 }
 
 async function showTagger() {
+    const tags = await fetchTags();
     const main = document.querySelector('main');
-    main.append(buildTagger());
+    main.append(buildTagger(tags));
 }
 
 showTagger();
