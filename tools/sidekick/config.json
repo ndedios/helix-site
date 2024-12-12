@@ -2,8 +2,8 @@
   "project": "Boilerplate with Library",
   "plugins": [
     {
-      "id": "tags",
-      "title": "Tags",
+      "id": "tagger",
+      "title": "Tagger",
       "environments": [ "edit" ],
       "url": "/tools/tagger/index.html",
       "includePaths": [ "**.docx**" ]
