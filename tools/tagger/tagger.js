@@ -1,11 +1,21 @@
 import { fetchTags } from '/scripts/aem.js';
 
+function copyTag(target) {
+    var selectedTags = document.getElementById("selectedTags");
+    selectedTags.value = target.dataset.tagId;
+    selectedTags.select();
+    selectedTags.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(selectedTags.value);
+}
+
 function buildTagger(tags) {
     const container = document.createElement('div');
     tags.forEach((tag) => {
-        const divTag = document.createElement('div');
-        divTag.textContent = tag.title;
-        container.append(divTag);
+        const button = document.createElement('button');
+        button.textContent = tag.title;
+        button.addEventListener('click', copyTag);
+        button.dataset.tagId = tag.tag;
+        container.append(button);
     });
     return container;
 }
