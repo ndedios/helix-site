@@ -2,10 +2,10 @@
   "project": "Boilerplate with Library",
   "plugins": [
     {
-      "id": "library",
-      "title": "Library",
+      "id": "tags",
+      "title": "Tags",
       "environments": [ "edit" ],
-      "url": "/tools/sidekick/library.html",
+      "url": "/tools/tagger/index.html",
       "includePaths": [ "**.docx**" ]
     }
   ]
