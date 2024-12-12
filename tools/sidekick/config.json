@@ -5,14 +5,7 @@
       "id": "tagger",
       "title": "Tagger",
       "environments": [ "edit" ],
-      "url": "/tools/tagger/index.html",
-      "includePaths": [ "**.docx**" ]
-    },
-    {
-      "id": "test",
-      "title": "Test",
-      "environments": [ "edit" ],
-      "event": "trigertest",
+      "event": "tagger",
       "includePaths": [ "**.docx**" ]
     }
   ]
