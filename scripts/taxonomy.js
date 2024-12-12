@@ -50,7 +50,7 @@ function filter(name) {
  * @returns {object} The taxonomy object
  */
 export default async (lang, url) => {
-  const root = `/${lang}/topics`;
+  const root = `/${lang}`;
   const escapeTopic = (topic) => {
     if (!topic) return null;
     return topic.replace(/\n/gm, ' ').trim();
@@ -58,7 +58,7 @@ export default async (lang, url) => {
 
   const isProduct = (cat) => cat && cat.toLowerCase() === PRODUCTS;
 
-  const target = url || `${root}/taxonomy.json`;
+  const target = url || `/tags.json`;
 
   return fetch(target)
     .then((response) => response.json())
