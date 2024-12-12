@@ -5,7 +5,7 @@
       "id": "tagger",
       "title": "Tagger",
       "environments": [ "edit" ],
-      "event": "tagger",
+      "url": "/tools/tagger/tagger.html",
       "includePaths": [ "**.docx**" ]
     }
   ]

@@ -1,5 +1,4 @@
 import { fetchTags } from '/scripts/aem.js';
-import { createModal } from '/blocks/modal/modal.js';
 
 async function buildTagger() {
     const tags = await fetchTags();
@@ -12,9 +11,9 @@ async function buildTagger() {
     return container;
 }
 
-export async function showTagger() {
-    const div = document.createElement('div');
-    div.append(buildTagger());
-    const { showModal } = await createModal(div.childNodes);
-    showModal();
+async function showTagger() {
+    const main = document.querySelector('main');
+    main.append(buildTagger());
 }
+
+showTagger();
