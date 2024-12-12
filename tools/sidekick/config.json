@@ -7,6 +7,13 @@
       "environments": [ "edit" ],
       "url": "/tools/tagger/index.html",
       "includePaths": [ "**.docx**" ]
+    },
+    {
+      "id": "test",
+      "title": "Test",
+      "environments": [ "edit" ],
+      "event": "trigertest",
+      "includePaths": [ "**.docx**" ]
     }
   ]
 }

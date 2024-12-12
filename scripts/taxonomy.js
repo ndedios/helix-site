@@ -76,40 +76,19 @@ export default async (lang, url) => {
         let level1; let
           level2;
         json.data.forEach((row) => {
-          let level = 3;
-          const level3 = escapeTopic(row[H.level3] !== '' ? row[H.level3] : null);
-          if (!level3) {
-            level = 2;
-            level2 = escapeTopic(row[H.level2] !== '' ? row[H.level2] : null);
-            if (!level2) {
-              level = 1;
-              level1 = escapeTopic(row[H.level1]);
-            }
-          }
-
-          const name = level3 || level2 || level1;
-
-          const category = row[H.type] ? row[H.type].trim().toLowerCase() : INTERNALS;
-
-          // skip duplicates
-          if (!isProduct(category) && data.topics[name]) return;
-          if (isProduct(category) && data.products[name]) return;
-
+          const { tag, title } = row;
           let link = row[H.link] !== '' ? row[H.link] : null;
           if (link) {
             const u = new URL(link);
             const current = new URL(window.location.href);
             link = `${current.origin}${u.pathname}`;
           } else {
-            link = `${root}/${filter(name)}`;
+            link = `${root}/${filter(tag)}`;
           }
 
           const item = {
-            name,
-            level,
-            level1,
-            level2,
-            level3,
+            tag,
+            title,
             link,
             category,
             hidden: row[H.hidden] ? row[H.hidden].trim() !== '' : false,
