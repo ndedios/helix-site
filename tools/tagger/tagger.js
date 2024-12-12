@@ -11,9 +11,10 @@ function buildTagger(tags) {
 }
 
 async function showTagger() {
-    const tags = await fetchTags();
+    const resp = await fetch(`/tags.json`);
+    const json = await resp.json();
     const main = document.querySelector('main');
-    main.append(buildTagger(tags));
+    main.append(buildTagger(json.data));
 }
 
 showTagger();
