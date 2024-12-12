@@ -1,8 +1,8 @@
 import { fetchTags } from '/scripts/aem.js';
 
-function copyTag(target) {
+function copyTag(e) {
     var selectedTags = document.getElementById("selectedTags");
-    selectedTags.value = target.dataset.tagId;
+    selectedTags.value = e.currentTarget.dataset.tagId;
     selectedTags.select();
     selectedTags.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(selectedTags.value);
