@@ -87,7 +87,7 @@ main > .section .default-content-wrapper {
   padding: 0 109px;
 }
 
-main > .section p:first-of-type {
+main > .section .article-header p:first-of-type {
   width: 100vw;
   left: 0;
   position: absolute;

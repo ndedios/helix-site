@@ -1,3 +1,9 @@
+main > .section .tabs-wrapper {
+  width: 748px;
+  background-color: #fff;
+  padding: 0 109px;
+}
+
 .tabs .tabs-list {
   display: flex;
   gap: 0.5ch;
