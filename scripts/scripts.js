@@ -157,10 +157,10 @@ function buildFragmentBlocks(main) {
  */
 function buildAutoBlocks(main) {
   try {
+    buildFragmentBlocks(main);
     buildArticleHeader(main);
     buildDynamicAlertList(main);
     buildImages(main);
-    buildFragmentBlocks(main);
     //buildHeroBlock(main);
   } catch (error) {
     // eslint-disable-next-line no-console
