@@ -91,6 +91,23 @@ async function loadFonts() {
 }
 
 /**
+   * Builds fragment blocks from links to fragments
+   * @param {Element} main The container element
+   */
+function buildFragmentBlocks(main) {
+  main.querySelectorAll('a[href]').forEach((a) => {
+    const url = new URL(a.href);
+    const domainCheck = checkDomain(url);
+    // don't autoblock the header navigation currently in fragments
+    if (domainCheck.isKnown && linkTextIncludesHref(a) && (url.pathname.includes('/fragments/') && !url.pathname.includes('header/'))) {
+      const block = buildBlock('fragment', url.pathname);
+      a.replaceWith(block);
+      decorateBlock(block);
+    }
+  });
+}
+
+/**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
  */
@@ -99,6 +116,7 @@ function buildAutoBlocks(main) {
     buildArticleHeader(main);
     buildDynamicAlertList(main);
     buildImages(main);
+    buildFragmentBlocks(main);
     //buildHeroBlock(main);
   } catch (error) {
     // eslint-disable-next-line no-console
