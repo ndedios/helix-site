@@ -4,6 +4,21 @@ main > .section .tabs-wrapper {
   padding: 0 109px;
 }
 
+main > .section .tabs-wrapper .columns-wrapper {
+  width: 100%;
+  padding: 0;
+}
+
+main > .section .tabs-wrapper .tag-cloud-wrapper {
+  width: 100%;
+  padding: 0;
+}
+
+main > .section .tabs-wrapper .author-bio-wrapper {
+  width: 100%;
+  padding: 0;
+}
+
 .tabs .tabs-list {
   display: flex;
   gap: 0.5ch;
