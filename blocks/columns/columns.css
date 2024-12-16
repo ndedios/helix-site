@@ -1,3 +1,9 @@
+main > .section .columns-wrapper {
+  width: 748px;
+  background-color: #fff;
+  padding: 0 109px;
+}
+
 .columns > div {
   display: flex;
   flex-direction: column;
@@ -17,6 +23,7 @@
 
 .columns > div > .columns-img-col img {
   display: block;
+  width: 100%;
 }
 
 @media (width >= 900px) {
