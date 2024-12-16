@@ -124,6 +124,17 @@ export function checkDomain(url) {
 }
 
 /**
+ * check if link text is same as the href
+ * @param {Element} link the link element
+ * @returns {boolean} true or false
+ */
+export function linkTextIncludesHref(link) {
+  const href = link.getAttribute('href');
+  const textcontent = link.textContent;
+  return textcontent.includes(href);
+}
+
+/**
    * Builds fragment blocks from links to fragments
    * @param {Element} main The container element
    */
