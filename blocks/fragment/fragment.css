@@ -1,9 +1,9 @@
 /* stylelint-disable no-empty-source */
-.fragment-wrapper .default-content-wrapper,
-.fragment-wrapper .tabs-wrapper,
-.fragment-wrapper .columns-wrapper,
-.fragment-wrapper .author-bio-wrapper,
-.fragment-wrapper .tag-cloud-wrapper {
+main > .section .fragment-wrapper .default-content-wrapper,
+main > .section .fragment-wrapper .tabs-wrapper,
+main > .section .fragment-wrapper .columns-wrapper,
+main > .section .fragment-wrapper .author-bio-wrapper,
+main > .section .fragment-wrapper .tag-cloud-wrapper {
     width: 100%;
     padding: 0;
 }
